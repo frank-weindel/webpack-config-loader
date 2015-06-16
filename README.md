@@ -62,7 +62,7 @@ From a client-side javascript file you pull this configuration in with:
 ```javascript
   var appConfig = require('webpack-config-loader!../app-config.js');
 ```
-And access the appropriate variables via:
+And access the appropriate variables like so:
 ```javascript
   console.log(appConfig.apiBaseUrl);
 ```
