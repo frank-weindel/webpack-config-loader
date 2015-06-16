@@ -50,10 +50,21 @@ module.exports = {
     /*
       This data is used by the webpack-config-loader
      */
-    configEnvironment: <environment>
+    configEnvironment: 'development' // <-- Set this to what you want to use
   }
   /* ... */
 }
 ```
 
-There are numerous ways you can modify the webpack config to set the environment dynamically. Grunt's webpack plugin allows you to easily add/override configuration. You can programatically do it with gulp. You can also use [yargs](https://github.com/bcoe/yargs) to populate it via the command line.
+There are numerous ways you can modify the webpack config to set the configEnvironment variable dynamically. Grunt's webpack plugin allows you to easily add/override configuration. You can programatically do it with gulp. You can also use [yargs](https://github.com/bcoe/yargs) to populate it via the command line.
+
+From a client-side javascript file you pull this configuration in with:
+```javascript
+  var appConfig = require('webpack-config-loader!../app-config.js');
+```
+And access the appropriate variables via:
+```javascript
+  console.log(appConfig.apiBaseUrl);
+```
+
+
