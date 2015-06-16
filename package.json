@@ -1,6 +1,6 @@
 {
   "name": "webpack-config-loader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Selects and compiles specific environment configuration into a webpack bundle",
   "main": "index.js",
   "scripts": {
