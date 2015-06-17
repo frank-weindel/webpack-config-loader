@@ -1,6 +1,12 @@
 # webpack-config-loader
 This loader is used for when you have a set of configuration variables that can change between different environments and you want to compile only one of them into your bundle.
 
+## Installation
+```
+npm install webpack-config-loader --save-dev
+```
+
+## Usage
 Example config file (app-config.js):
 ```javascript
 /**
