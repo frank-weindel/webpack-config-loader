@@ -24,7 +24,11 @@ module.exports = function(content) {
     Grab the appropriate configuration based on environment
    */
   var allConfigs = sandbox.module.exports
-  var envConfig = allConfigs[environment];
+  var envConfig = allConfigs[environment] || {};
+
+  if (!envConfig.environment) {
+    envConfig.environment = environment;
+  }
 
   return "module.exports = " + JSON.stringify(envConfig) + ";"
 };
